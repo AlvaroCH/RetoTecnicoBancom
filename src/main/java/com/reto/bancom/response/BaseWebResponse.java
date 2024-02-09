@@ -1,6 +1,6 @@
-package com.bcp.retobcp.response;
+package com.reto.bancom.response;
 
-import com.bcp.retobcp.exception.ErrorCode;
+import com.reto.bancom.exception.ErrorCode;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

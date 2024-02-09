@@ -1,13 +1,13 @@
-package com.bcp.retobcp;
+package com.reto.bancom;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class RetobcpApplication {
+public class RetoApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RetobcpApplication.class, args);
+		SpringApplication.run(RetoApplication.class, args);
 	}
 
 }

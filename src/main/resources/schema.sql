@@ -1,23 +1,23 @@
-DROP TABLE IF EXISTS exchange_rate;
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS authorities;
+DROP TABLE IF EXISTS posts;
 
-create table exchange_rate(
-	id varchar_ignorecase(50) not null primary key,
-	target_currency varchar_ignorecase(200) not null,
-	original_currency varchar_ignorecase(200) not null,
-	exchange_rate Double not null
-);
-
-create table users(
-	username varchar_ignorecase(50) not null primary key,
+create table users (
+	idUser varchar_ignorecase(50) not null primary key,
+	cellphone varchar_ignorecase(200) not null,
+	name varchar_ignorecase(200) not null,
+	lastName varchar_ignorecase(200) not null,
 	password varchar_ignorecase(200) not null,
-	enabled boolean not null
+	creationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	lastModificationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+);
+create table posts (
+	idPost varchar_ignorecase(50) not null primary key,
+	text varchar_ignorecase(200) not null,
+	creationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    lastModificationDate TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+	constraint fk_post_users foreign key(idUser) references users(idUser)
+
 );
 
-create table authorities (
-	username varchar_ignorecase(50) not null,
-	authority varchar_ignorecase(50) not null,
-	constraint fk_authorities_users foreign key(username) references users(username)
-);
+
 

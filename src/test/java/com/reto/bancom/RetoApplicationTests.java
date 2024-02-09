@@ -1,10 +1,10 @@
-package com.bcp.retobcp;
+package com.reto.bancom;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class RetobcpApplicationTests {
+class RetoApplicationTests {
 
 	@Test
 	void contextLoads() {
